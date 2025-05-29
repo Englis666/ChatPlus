@@ -1,44 +1,47 @@
-@extends('layouts.app')
+@extends('layouts.authForms.register')
 
-@section('title', 'Registro')
+@section('title', 'Registro - DevSync')
 
 @section('content')
-<div class="d-flex justify-content-center align-items-center vh-100 bg-light">
-    <div class="card shadow-sm p-4" style="width: 100%; max-width: 400px; border-radius: 12px;">
-        <h3 class="mb-4 text-center fw-bold text-primary">Registro</h3>
-        <form method="POST" action="{{ route('register') }}">
-            @csrf
-
-            <div class="mb-3">
-                <label for="email" class="form-label fw-semibold">Nombre Completo</label>
-                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="tucorreo@ejemplo.com" required autofocus>
+    <div class="register-container">
+        <div class="register-form-section">
+            <div class="devsync-logo">
+                <span class="icon">&#9650;</span> DevSync
             </div>
+            <h2 class="mb-4">Registrarse</h2>
+            <form method="POST" action="{{ route('register') }}">
+                @csrf
 
-            <div class="mb-3">
-                <label for="email" class="form-label fw-semibold">Nombre De Usuario</label>
-                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="tucorreo@ejemplo.com" required autofocus>
+
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="nombreCompleto" placeholder="Nombre Completo">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="Correo" placeholder="Correo Electrónico">
+                </div>
+                <div class="mb-3">
+                    <input type="text" class="form-control" id="usuario" placeholder="Nombre de Usuario">
+                </div>
+                <div class="mb-3">
+                    <input type="password" class="form-control" id="password" placeholder="Contraseña">
+                    <small class="form-text text-muted mt-2">
+                        <a href="#">¿Olvidaste tu contraseña?</a>
+                    </small>
+                </div>
+                <div class="mb-3">
+                    <small class="form-text text-muted">
+                        ¿Ya tienes cuenta? <a href="{{ route('login') }}">Inicia Sesion aqui</a> 
+                    </small>
+                </div>
+                <button type="submit" class="btn btn-primary w-100">Iniciar Sesión</button>
+            </form>
+        </div>
+        <div class="register-image-section">
+            <div class="register-image-placeholder">
+                <i class="bi bi-image"></i>
             </div>
-
-            <div class="mb-3">
-                <label for="email" class="form-label fw-semibold">Correo Electronico<</label>
-                <input type="email" id="email" name="email" class="form-control form-control-lg" placeholder="tucorreo@ejemplo.com" required autofocus>
-            </div>
-
-            <div class="mb-4">
-                <label for="password" class="form-label fw-semibold">Contraseña</label>
-                <input type="password" id="password" name="password" class="form-control form-control-lg" placeholder="********" required>
-            </div>
-
-            
-
-            <button type="submit" class="btn btn-primary btn-lg w-100 rounded-pill shadow-sm">
-                Registrarse
-            </button>
-        </form>
-
-        <div class="mt-3 text-center">
-            <small class="text-muted">¿Ya tienes cuenta? <a href="{{ route('login') }}">Regístrate</a></small>
+            <h3>¡Únete a DevSync!</h3>
+            <p class="text-muted">Crea tu cuenta gratis y empieza a organizar tus ideas, colaborar en equipo y llevar tus proyectos al éxito.</p>
         </div>
     </div>
-</div>
 @endsection
