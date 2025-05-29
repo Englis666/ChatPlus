@@ -1,0 +1,108 @@
+/* Sidebar Container */
+@import "./responsive.css";
+.sidebar {
+    min-height: 100vh;
+    background-color: var(--sidebar-bg);
+    color: #fff;
+    padding: 2.5rem 1.8rem;
+    border-right: 1px solid #ffffff08;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 4px 0 20px var(--shadow-medium);
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 1030;
+    transition: all 0.3s ease-in-out;
+}
+
+/* Sidebar Header */
+.sidebar .sidebar-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 3rem;
+    color: var(--sidebar-header-color);
+}
+
+.sidebar .sidebar-header .ri-compasses-2-line {
+    font-size: 2.5rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transform: rotate(-10deg);
+}
+
+/* App Title */
+.sidebar h5.app-title {
+    font-weight: 800;
+    font-size: 1.8rem;
+    margin: 0;
+    color: #fff;
+    letter-spacing: -0.03em;
+}
+
+/* Navigation Links */
+.sidebar .nav-link {
+    display: flex;
+    align-items: center;
+    gap: 1.1rem;
+    padding: 1rem 1.4rem;
+    margin-bottom: 0.8rem;
+    border-radius: 12px;
+    font-weight: 500;
+    font-size: 1.08rem;
+    color: rgba(255, 255, 255, 0.75);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.sidebar .nav-link .ri-icon {
+    font-size: 1.55rem;
+    vertical-align: middle;
+}
+
+.sidebar .nav-link:hover {
+    background-color: var(--sidebar-link-hover);
+    color: #fff;
+    transform: translateX(8px);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.sidebar .nav-link.active {
+    background: var(--sidebar-link-active);
+    color: #fff;
+    font-weight: 600;
+    transform: translateX(8px);
+    box-shadow: 0 8px 20px rgba(81, 78, 224, 0.45);
+}
+
+/* User Profile Section */
+.user-profile-sidebar {
+    display: flex;
+    align-items: center;
+    gap: 0.9rem;
+    padding-top: 2rem;
+    margin-top: auto;
+    border-top: 1px solid rgba(255, 255, 255, 0.06);
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.user-profile-sidebar img {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    box-shadow: 0 0 0 2px var(--primary-color-start);
+}
+
+.user-profile-sidebar .user-name {
+    font-weight: 600;
+    font-size: 1.15rem;
+    line-height: 1.2;
+}
+
+.user-profile-sidebar .user-role {
+    font-size: 0.9rem;
+    color: rgba(255, 255, 255, 0.55);
+}

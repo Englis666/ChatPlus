@@ -1,0 +1,198 @@
+.summary-card,
+.chart-container,
+.activity-card,
+.ticket-card,
+.project-card {
+    background: var(--card-background);
+    border-radius: 20px;
+    padding: 2.5rem; /* Max padding */
+    box-shadow: 0 10px 30px var(--shadow-light);
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    border: 1px solid var(--border-color);
+    position: relative;
+    overflow: hidden;
+}
+
+.summary-card:hover,
+.project-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 45px var(--shadow-medium);
+    border-color: var(--primary-color-start);
+}
+
+.summary-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 180px;
+}
+
+.summary-card .card-icon {
+    font-size: 3.5rem;
+    margin-bottom: 1.2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.8;
+}
+
+.summary-card h6 {
+    color: var(--text-muted);
+    font-size: 1.05rem;
+    margin-bottom: 0.85rem;
+    font-weight: 500;
+}
+
+.summary-card h2 {
+    font-weight: 800;
+    font-size: 3.2rem;
+    margin-bottom: 0;
+    line-height: 1;
+    color: var(--text-dark);
+    letter-spacing: -0.05em;
+}
+
+.chart-container {
+    padding: 3rem;
+    margin-bottom: 3rem;
+    position: relative;
+}
+.chart-container::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: radial-gradient(
+            circle at 100% 150%,
+            var(--primary-color-start) 0,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 0% 150%,
+            var(--accent-green) 0,
+            transparent 40%
+        ),
+        radial-gradient(
+            circle at 100% 50%,
+            var(--accent-orange) 0,
+            transparent 30%
+        ),
+        radial-gradient(circle at 0% 50%, #4a90e2 0, transparent 30%);
+    background-size: 10% 10%, 10% 10%, 10% 10%, 10% 10%;
+    background-repeat: no-repeat;
+    background-position: top left, top right, bottom left, bottom right;
+    opacity: 0.03;
+    border-radius: 20px;
+    z-index: 0;
+}
+.chart-container h5 {
+    margin-bottom: 2.5rem;
+    font-weight: 700;
+    font-size: 1.6rem;
+    position: relative;
+    z-index: 1;
+}
+.chart-container canvas {
+    max-height: 350px;
+    position: relative;
+    z-index: 1;
+}
+
+.activity-card .list-group-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.2rem;
+    padding: 1.1rem 0;
+    border-color: var(--border-color);
+}
+.activity-card .list-group-item:last-child {
+    border-bottom: none;
+}
+.activity-card .list-group-item .activity-icon {
+    font-size: 1.4rem;
+    color: var(--primary-color-end);
+    padding-top: 2px;
+}
+.activity-card .list-group-item span {
+    flex-grow: 1;
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 500;
+}
+.activity-card .list-group-item small {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    margin-left: auto;
+    white-space: nowrap;
+}
+
+.ticket-card .ticket-item {
+    padding: 1.3rem 0;
+}
+.ticket-card .ticket-item:not(:last-child) {
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 1.3rem;
+}
+.ticket-card .ticket-item .ticket-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.7rem;
+}
+.ticket-card .ticket-item .ticket-header strong {
+    font-weight: 700;
+    font-size: 1.15rem;
+    color: var(--text-dark);
+}
+.ticket-card .ticket-item .ticket-header small {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+.ticket-card .ticket-item .badge {
+    font-size: 0.85rem;
+    padding: 0.6em 1em;
+    border-radius: 8px;
+    font-weight: 600;
+    margin-bottom: 0.9rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4em;
+}
+.ticket-card .ticket-item .badge.bg-secondary {
+    background-color: #6c757d !important;
+    color: #fff;
+}
+.ticket-card .ticket-item .badge.bg-danger {
+    background-color: #dc3545 !important;
+    color: #fff;
+}
+.ticket-card .ticket-item p {
+    font-size: 0.98rem;
+    color: var(--text-muted);
+    margin-bottom: 0;
+    line-height: 1.6;
+}
+
+.project-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 160px;
+    font-weight: 600;
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.project-card .project-icon {
+    font-size: 3rem;
+    margin-bottom: 1.2rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}

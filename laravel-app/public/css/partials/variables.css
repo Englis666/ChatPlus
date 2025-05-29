@@ -1,0 +1,19 @@
+:root {
+    --primary-gradient: linear-gradient(135deg, #6a67ec 0%, #514ee0 100%);
+    --primary-color-start: #6a67ec;
+    --primary-color-end: #514ee0;
+    --accent-green: #28a745;
+    --accent-orange: #fd7e14;
+    --background-light: #f0f2f5; /* Subtle cool gray */
+    --card-background: #ffffff;
+    --text-dark: #212529;
+    --text-muted: #6f7c8d;
+    --sidebar-bg: #212234; /* Even darker, richer sidebar */
+    --sidebar-header-color: #bec2d6;
+    --sidebar-link-active: linear-gradient(90deg, #514ee0 0%, #6a67ec 100%);
+    --sidebar-link-hover: rgba(255, 255, 255, 0.1);
+    --border-color: #e0e4e8;
+    --shadow-light: rgba(0, 0, 0, 0.04);
+    --shadow-medium: rgba(0, 0, 0, 0.09);
+    --shadow-strong: rgba(0, 0, 0, 0.18);
+}

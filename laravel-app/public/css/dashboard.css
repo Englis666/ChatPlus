@@ -1,0 +1,9 @@
+/* main.css */
+
+@import "./partials/variables.css";
+@import "./partials/base.css";
+@import "./partials/sidebar.css";
+@import "./partials/main-content.css";
+@import "./partials/cards.css";
+@import "./partials/utilities.css";
+@import "./partials/responsive.css";

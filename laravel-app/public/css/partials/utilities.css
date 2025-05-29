@@ -1,0 +1,30 @@
+.view-all-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2.5rem;
+    font-weight: 700;
+    font-size: 1.1rem;
+    background: var(--primary-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    position: relative;
+    z-index: 1;
+    padding: 0.8rem 1.5rem;
+    border-radius: 10px;
+    border: 2px solid transparent; /* For border animation */
+}
+.view-all-link:hover {
+    transform: translateY(-3px); 
+    opacity: 0.95;
+    border-image: var(--primary-gradient) 1; 
+    text-decoration: none; /
+}
+.view-all-link i {
+    transition: transform 0.3s ease-out;
+}
+.view-all-link:hover i {
+    transform: translateX(5px); 
+}
