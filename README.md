@@ -1,8 +1,8 @@
-ChatPlus Software
+DevSync Software
 
-ChatPlus es una plataforma de comunicación colaborativa tipo Slack, diseñada especialmente para equipos de desarrollo de software. A diferencia de otras soluciones, ChatPlus integra potentes herramientas propias para documentar, modelar y gestionar proyectos de software de forma ágil, todo desde una sola interfaz.
+DevSync es una plataforma de comunicación colaborativa tipo Slack, diseñada especialmente para equipos de desarrollo de software. A diferencia de otras soluciones, DevSync integra potentes herramientas propias para documentar, modelar y gestionar proyectos de software de forma ágil, todo desde una sola interfaz.
 
-Además de mensajería en tiempo real, ChatPlus cuenta con un completo sistema de documentación técnica, creación de diagramas UML y de bases de datos, y soporte para metodologías ágiles, enfocado en la colaboración de equipos técnicos.
+Además de mensajería en tiempo real, DevSync cuenta con un completo sistema de documentación técnica, creación de diagramas UML y de bases de datos, y soporte para metodologías ágiles, enfocado en la colaboración de equipos técnicos.
 🧩 Características principales
 📡 Mensajería instantánea
 
@@ -78,31 +78,17 @@ composer install
 cp .env.example .env
 php artisan key:generate
 
-# Instala dependencias Node.js (opcional para herramientas futuras)
-
-npm install
-
 # Ejecuta migraciones y seeders
 
 php artisan migrate --seed
 
-# Inicia el servidor
+# Inicia el servidor1
 
-php artisan serve
+php artisan:native serve
 
 🧪 Uso
 
-    Accede a http://localhost:8000 o la interfaz de escritorio.
-
-    Regístrate o inicia sesión.
-
-    Crea canales, documenta tu proyecto y genera diagramas directamente.
-
-    Utiliza el panel ágil para organizar tareas y planificar sprints.
-
 🔮 Futuras mejoras
-
-    Soporte completo para frontend en React o Vue.
 
     Chat en tiempo real con WebSockets.
 
