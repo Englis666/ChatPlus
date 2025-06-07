@@ -43,6 +43,10 @@ class AuthController extends Controller{
         return back()->withErrors(['register' => 'Error al registrar el usuario.']); 
     }
 
+    public function logout(){
+        Auth::logout();
+        return redirect()->route('login');
+    }
 
 
 
