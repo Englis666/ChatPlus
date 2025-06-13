@@ -268,7 +268,7 @@ CREATE TABLE IF NOT EXISTS message_attachments (
     attachment_type ENUM('uml_diagram', 'document', 'file') NOT NULL,
     uml_diagram_id INT,
     document_id INT,
-    file_id INT,
+    --file_id INT,
     created_at DATETIME DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (message_id) REFERENCES messages(id),
     FOREIGN KEY (uml_diagram_id) REFERENCES uml_diagrams(id),
